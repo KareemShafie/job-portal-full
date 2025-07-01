@@ -1,0 +1,43 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-3">
+      <app-sidebar-filters (filterChange)="onFilterChange($event)"></app-sidebar-filters>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let job of jobs">
+          <div class="card h-100 shadow-sm job-card">
+            <img [src]="job.image" class="card-img-top" alt="Job Image" style="height: 200px; object-fit: cover;" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">{{ job.title }}</h5>
+              <p class="card-text mb-1"><strong>{{ job.company?.name }}</strong></p>
+              <p class="card-text text-muted">{{ job.location }}</p>
+              <span class="badge job-type-badge">{{ job.job_type }}</span>
+
+
+              <div class="job-details-hover">
+                <p class="mb-1"><strong>Salary:</strong> {{ job.salary }}</p>
+                <p class="mb-1"><strong>Experience:</strong> {{ job.experience_level }}</p>
+                <p class="small">{{ job.description }}</p>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 text-end">
+            <button class="btn btn-sm btn-purple" (click)="openModal(job.title)">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" *ngIf="showModal">
+    <div class="modal-box">
+  <p class="mb-3 fw-bold">
+  Your application for <span class="text-purple">{{ selectedJobTitle }}</span> was submitted successfully! ✅
+  </p>
+      <button class="btn btn-purple-outline" (click)="closeModal()">Close</button>
+    </div>
+  </div>
+</div>

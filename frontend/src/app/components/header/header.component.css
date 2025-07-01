@@ -1,0 +1,11 @@
+nav {
+  z-index: 1030;
+  background-color: white;
+}
+.navbar {
+  height: 60px; /* ثبّت الارتفاع */
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+

@@ -1,0 +1,56 @@
+<div class="p-3 border rounded bg-light">
+  <h5 class="mb-3">Filter Jobs</h5>
+
+  <div class="mb-3">
+    <label>Job Title</label>
+    <input [(ngModel)]="filters.title" class="form-control" placeholder="e.g. Software Engineer" />
+  </div>
+
+  <div class="mb-3">
+    <label>Location</label>
+    <input [(ngModel)]="filters.location" class="form-control" placeholder="e.g. Amman" />
+  </div>
+
+  <div class="mb-3">
+    <label>Salary From</label>
+    <input [(ngModel)]="filters.salary_from" class="form-control" type="number" placeholder="e.g. 3000" />
+  </div>
+
+  <div class="mb-3">
+    <label>Salary To</label>
+    <input [(ngModel)]="filters.salary_to" class="form-control" type="number" placeholder="e.g. 9000" />
+  </div>
+
+  <div class="mb-3">
+    <label>Job Type</label>
+    <select [(ngModel)]="filters.job_type" class="form-select">
+      <option value="">All</option>
+      <option value="Full Time">Full Time</option>
+      <option value="Part Time">Part Time</option>
+      <option value="Contract">Contract</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Experience Level</label>
+    <select [(ngModel)]="filters.experience_level" class="form-select">
+      <option value="">All</option>
+      <option value="Fresher">Fresher</option>
+      <option value="Junior">Junior</option>
+      <option value="Mid-Level">Mid-Level</option>
+      <option value="Senior">Senior</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label>Company Sector</label>
+    <input [(ngModel)]="filters.sector" class="form-control" placeholder="e.g. Tech, Marketing..." />
+  </div>
+
+  <div class="mb-3">
+    <label>Company Size</label>
+    <input [(ngModel)]="filters.company_size" class="form-control" placeholder="e.g. 1-10, 200+" />
+  </div>
+
+<button class="btn btn-purple-outline w-100" (click)="applyFilters()">Apply Filters</button>
+</div>
