@@ -7,9 +7,8 @@ Built with **Angular** (frontend) and **Laravel 12** (backend).
 
 ## 🚀 Features
 
-- 🔍 Search and filter jobs by category, type, location, and salary
+- 🔍 Advanced filtering options including: job title, location, salary range, job type, experience level, company sector, and company size
 - 📝 View job details and apply
-- 💾 Save jobs for later
 - 🏢 Company admin panel to manage job listings
 - ⚙️ RESTful Laravel API
 - 🌐 Frontend-backend HTTP integration
